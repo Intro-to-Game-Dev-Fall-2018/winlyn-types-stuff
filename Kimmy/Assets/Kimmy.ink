@@ -9,6 +9,8 @@ Your mom is standing on the porch.
 Dana: Mom! Look! God sent me a baby!
 Mom: ...Excuse me?
 Dana: Her name is Kimmy!
+
+You reveal the small blonde girl standing behind you.
 -> Kimmy1
 
 = Kimmy1
@@ -51,13 +53,15 @@ Mom: It’s ok dear, let’s go to your house Kimmy… you said it’s on Ferry 
 +[Head to Kimmy's house] -> KimmyHouse
 
 = KimmyHouse
+You walk to Kimmy's home with her and your mother.  
+
 Dana: I’m sorry… I thought God sent me a baby and I got so excited…
 
-KimmyMom: Oh, don’t worry. Thank you for finding Kimmy and walking her home. What's your name, dear?
+Mrs. Munro: Oh, don’t worry. Thank you for finding Kimmy and walking her home. What's your name, dear?
 
 Dana: I’m Dana…
 
-KimmyMom: I don’t know many kids as responsible as you, walking Kimmy all the way home. I hope you two can be friends. I know Kimmy could learn a lot from you.
+Mrs. Munro: I don’t know many kids as responsible as you, walking Kimmy all the way home. I hope you two can be friends. I know Kimmy could learn a lot from you.
 
 +[A new friend!] -> NewFriend
 
@@ -66,26 +70,29 @@ Kimmy: My… friend?
 
 Dana: Yes! I’d love to be friends, Kimmy. Can I come by and play with you tomorrow?
 
-KimmyMom: I’ve been looking for a babysitter, actually. Her grandma was helping with that before, but she… well, she can’t anymore.
+Mrs. Munro: I’ve been looking for a babysitter, actually. Her grandma was helping with that before, but she… well, she can’t anymore.
 
-KimmyMom: Kimmy’s normally alright in her harness on the porch, but she’s getting a little old for that…
+Mrs. Munro: Kimmy’s normally alright in her harness on the porch, but she’s getting a little old for that…
 
-KimmyMom: If you’d like to play with Kimmy tomorrow, I’d be happy to pay you a quarter to keep an eye on her.
+Mrs. Munro: If you’d like to play with Kimmy tomorrow, I’d be happy to pay you a quarter to keep an eye on her.
 
 +[Wow, a job!] -> Job
 
 = Job
 Dana: Wow! Yes, please! I’d love to!
 
-KimmyMom: My work schedule is a little… hectic. It’d be great to have you by in the morning.
+Mrs. Munro: My work schedule is a little… hectic. It’d be great to have you by in the morning.
 
 Dana: I’ll be here first thing! Wow, I didn’t expect to land a job today. Thanks so much!
 
++[This is exciting!] -> Exciting
+
+= Exciting
 Mom: Well, that all sounds good to me. A summer job will be a nice way to keep busy. Now then, let’s leave this nice family to their dinner.
 
 Dana: Ok. Bye bye Kimmy, and Mrs...?
 
-KimmyMom: Mrs. Munro. Again, thank you for giving Kimmy a hand. It was nice meeting you, Mrs. Navarro.
+Mrs. Munro: Mrs. Munro. Again, thank you for giving Kimmy a hand. It was nice meeting you, Mrs. Navarro.
 
 Mom: Likewise.
 
@@ -94,6 +101,8 @@ Kimmy: Bye bye.
 +[The next day...] -> Day1
 
 =Day1
+First thing in the morning, you walk to Kimmy's house for your first day on the job!
+
 Dana: Mornin’ Kimmy! I’m here to babysit, like I promised! Is your mom around?
 
 Kimmy: My mommy’s not inside. She left already.
@@ -120,24 +129,29 @@ Dana: Ok then! Want to walk around and play some games with the other kids?
 
 Kimmy: Other kids…?
 
++[I wonder who Kimmy knows] -> Who
+
+= Who
 Dana: You know, the neighborhood kids. Like Donna. Isn’t she your age? You’re both going to be in Kindergarten, right?
 
 Kimmy: Oh, yeah… I don’t think Donna is my friend though, so she probably wouldn’t want to play...
 
++[Time to make friends!] -> Friends
+
+= Friends
 Dana: Well, let’s go become her friend! There's lots of other kids around, too. Like Anthony. I know him from school.
 
-Dana: Come on, let’s go!
+Dana: Come on, let’s go buy some game pieces and find someone to play with!
 
 Kimmy: ...!
 
-What's next?
+* [Dean] -> Dean
 
 //Kimmy's House
 -> KimmyHouse1
 
 === KimmyHouse1 ===
 
-* [Dean] -> Dean
 * [Donna] -> Donna
 + [Downtown] -> Downtown
 + [Home] -> Home
@@ -145,6 +159,7 @@ What's next?
 
 
 === Dean ===
+You and Kimmy walk to the corner store next to her house.
 
 Dean: Hey, Kid.
 
@@ -180,6 +195,9 @@ Dana: You should sell your clothes at Jordan Marsh! That’s where I always find
 
 Dean: Hah! That’s a long ways off for me. But maybe someday… anyways, what can I get for ya?
 
++[Yahtzee sounds fun] -> Yahtzeee
+
+= Yahtzeee
 //store stuff
 
 Dana: Some dice, please!
@@ -193,6 +211,8 @@ Dana: Thanks Dean!
 -> KimmyHouse1
 
 === Donna ===
+A girl wearing ears is playing outside near Kimmy's house.
+
 
 Kimmy: Hi Donna.
 
@@ -211,6 +231,9 @@ Dana: First of all, I’m her babysitter. Second, she’s perfectly able to unti
 
 Donna: She should probably stay on her porch. We’re the same age, but my mom takes me everywhere so I won’t get lost. I bet Kimmy would get lost if she wandered too far.
 
++[That's not nice!] -> notNice
+
+= notNice
 Dana: I don’t know about that. Anyways, I was just going to ask if you wanna play with us... but I feel like you're being mean to Kimmy.
 
 Donna: Oh, no. I'm just being honest!
@@ -221,6 +244,9 @@ Donna: Oh, no. I'm just being honest!
 Dana: Ok... well, I hope you two can get along, since you're neighbors... want to play a game with us?
 Donna: Well, I’m trying to avoid Harold so it’s probably good to look busy. He keeps trying to tell me that my ears look childish. He is so snobby.
 
++[Wow] -> Wow
+
+= Wow 
 Kimmy: I like your ears.
 
 Donna: Oh, thanks. They’re new. Anyways, I wanna play a new game.
@@ -232,13 +258,17 @@ Let's play some Yahtzee then!
 = Yahtzee
 Donna: Kimmy loved that.
 
-Donna: I’m surprised, normally you’re so quiet Kimmy
-.
+Donna: I’m surprised, normally you’re so quiet Kimmy.
+
 Kimmy: Mom said it’s ok to be quiet.
 
++[Of course it is!] -> Quiet
+
+= Quiet
 Dana: That’s right! Games are a nice way to talk and play with your friends though, don’t you think? Even quiet kids like games, I think, usually.
 
 Kimmy: … Are we friends? I thought you were my babysitter.
+
 
 Dana: Yes! Of course we’re friends! I know we just met yesterday, but… that’s normal!
 
@@ -253,23 +283,29 @@ Dana: Anthony and I became friends by playing games together. We met playing kic
 
 Donna: Anthony and his little sister Amber are… annoying. Don’t tell them I said that though…
 
++[What??] -> What 
+
+= What
 Dana: Really? Anthony and I go to the same school and do sports together sometimes. He’s way nicer than the other boys at my school. I like him and Amber.
 
 Donna: There’s no rule that says you have to like your classmates.
 
 Dana: Yeah, I know… but Anthony is nice to me, so I like him.
 
+Donna: Oooh, you like... Like him?
+
 + [Woah there] -> Woah
 
 =Woah
-Donna: Oooh, you like... Like him?
-
 Dana: …I’m not going to answer that, Donna. Who I like is none of your business.
 
 Donna: ...Are you gonna walk to Jordan Marsh? That’s where my babysitter used to take me.
 
 Dana: Maybe! Kimmy doesn't seem to know too many people around town though, so I think we should save big trips for later.
 
++[Gotta take small steps] -> smallSteps
+
+= smallSteps
 Donna: Playing is fine, but isn’t it boring sometimes? I need more friends  who will go with me to Jordan Marsh. I like going shopping there. I hide in the clothes racks sometimes.
 
 Kimmy: Dad took me there once. He needed a new leather jacket. But then he bought another new guitar and mom got mad when we came home.
@@ -298,6 +334,9 @@ Kimmy: I’ve never worn a ribbon.
 
 Dana: Wow! Really? I can get you one, Kimmy, don’t worry.
 
++[A ribbon would be cute!] -> Cute
+
+= Cute
 Kimmy: No thank you, I’m not supposed to spend any money. I don’t have any anyways.
 
 Dana: I’ll save up and get you one!
@@ -325,9 +364,9 @@ Dana: I think this deserves a sticker. You did a good job! We're gonna keep maki
 
 === Playground ===
 
-* [Blythe] -> Blythe
+//* [Blythe] -> Blythe
 * [Janey] -> Janey
-* [Linda] -> Linda
+//* [Linda] -> Linda
 + [Downtown] -> Downtown
 + [Kimmy's House] -> KimmyHouse1
 + [Home] -> Home
@@ -423,11 +462,15 @@ Dana: I think this deserves a sticker. You did a good job! We're gonna keep maki
 -> Playground
 
 === Janey ===
+A girl wearing an orange dress and a cool pair of glasses stands by the swing sets.
 
 Dana: Hey Janey, how are you?
 
 Janey: You know the Grenada movie theatre? I got a summer job there. I started last week.
 
++[Awesome!] -> Awesome
+
+= Awesome
 Kimmy: Wow… my mom took me there once...
 
 Janey: What did you see? I go to the movies a lot, so I bet I saw it too.
@@ -456,10 +499,16 @@ Janey: Yeah, it’s pretty awesome to be at the snack counter. I love popcorn. I
 
 Dana: I also have a summer job! I’m babysitting Kimmy! I wasn’t planning on working, but I think it’s great.
 
++[It's good to keep busy] -> Busy
+
+= Busy
 Janey: My mom said a summer job is important. I didn’t want her to think I was lazy, and I love movies so I got my cousin to help me get the job. He sells tickets there.
 
 Dana: I’m glad I won’t be lazy this summer. I think I’m getting too old to be lazy. I mean, I’m going into the 5th grade.
 
++[I have to be more mature] -> Mature
+
+= Mature 
 Janey: Yeah, it’s more fun to be out with people who aren’t just teachers and classmates too.
 
 Janey: By the way, I’m not working today. Wanna play together?
@@ -474,6 +523,9 @@ Dana: That’s it! Good job Janey, you picked that up fast!
 
 Janey: My dad says I’m a fast learner. I can even beat Anthony at Tic Tac Toe sometimes.
 
++[Wow!] -> Wow
+
+= Wow
 Kimmy: I don’t think I’m a fast learner...
 
 Dana: I think you are! You’re great, Kimmy.
@@ -491,12 +543,18 @@ Janey: You’re so little, Kimmy, it’s ok. You have time. Get a job like Dana 
 
 Kimmy: I want to be smart and big like you two…
 
++[In due time!] -> dueTime
+
+= dueTime
 Dana: Let’s make you some friends first. You can worry about jobs later.
 
 Kimmy: Ok...
 
 Dana: Say… do you think you’ll ever try joining the school theatre, Janey? I was thinking of auditioning for a play next year…
 
++[It looks fun!] -> looksFun
+
+= looksFun
 Janey: I could, but my mom’s YWCA theatre group is… better.
 
 Kimmy: I like seeing the plays at school. Can we be in one together, Dana?
@@ -512,6 +570,9 @@ Janey: Yes, I am. Both my parents went to Catholic school too.
 
 Kimmy: I go to Lincoln Elementary School.
 
++[Kimmy should still try!] -> Try
+
+= Try
 Janey: You should audition for your school’s play, Kimmy. You’re cute so I bet you’d get a good part. Probably a love interest.
 
 Kimmy: ... A love interest?
@@ -520,6 +581,9 @@ Janey: Cute girls usually get cast as love interests. You know, like a Juliet. O
 
 Kimmy: I wouldn’t want a big part… or a… a love part...
 
++[Same... No thanks!] -> noThanks
+
+= noThanks
 Dana: Me neither! I think I’d get stage fright normally, but especially if I had to be romantic with some boy.
 
 Janey: The romantic parts are the most fun--you might even get to do a stage kiss.
@@ -531,6 +595,9 @@ Kimmy: Maybe theatre isn’t fun after all…
 
 Janey: Kimmy, it is! I know you’re… a bit of a loner, so it’d probably be good for you to do theatre. You’d learn how to be more social.
 
++[She's trying!] -> Trying
+
+= Trying
 Dana: Kimmy’s not a loner! You're making lots of friends today, right Kimmy? We’re going to play with everyone!
 
 Kimmy: ...yes.
@@ -539,6 +606,9 @@ Dana: Also, it’s ok to want to be alone sometimes. But, everyone needs friends
 
 Kimmy: I don’t… know. Maybe.
 
++[Friends are important!] -> Important
+
+= Important
 Janey: Hah! You want friends, Kimmy. All kids do.
 
 Kimmy: Not everyone is nice though...
@@ -711,7 +781,7 @@ Dana: I think this deserves a sticker. You did a good job! We're gonna keep maki
 
 === Home ===
 
-* [Mom] -> Mom
+//* [Mom] -> Mom
 * [Harold] -> Harold
 + [Downtown] -> Downtown
 + [Kimmy's House] -> KimmyHouse1
@@ -894,12 +964,13 @@ Dana: I think this deserves a sticker. You did a good job! We're gonna keep maki
 === Downtown ===
 
 * [Jimmy] -> Jimmy
-* [Anthony & Amber] -> AnthonyAmber
+//* [Anthony & Amber] -> AnthonyAmber
 + [Kimmy's House] -> KimmyHouse1
 + [Playground] -> Playground
 + [Home] -> Home
 
 === Jimmy ===
+Downtown, a boy about Kimmy's age stands on the sidewalk, his nose buried in a comic book.
 
 Jimmy: ...Hi Kimmy.
 
@@ -907,10 +978,16 @@ Kimmy: Hi Jimmy…
 
 Dana: ...
 
++[What's he reading?] -> Reading
+
+= Reading
 Dana: Whatcha reading there, Jimmy? Looks neat.
 
 Jimmy: M-my comic… Archie...
 
++[I've heard of that!] -> Heard
+
+= Heard
 Dana: Some of my friends at school read that! Did you get it at the bookstore?
 
 Jimmy: Yeah!
@@ -924,12 +1001,18 @@ Jimmy: Y-you can borrow one of mine whenever you like, Kimmy! And then we can uh
 
 Jimmy: We can talk about it and pick our--our favorite characters!
 
++[A new friend!] -> anotherFriend
+
+= anotherFriend
 Dana: Wow! That’s so nice of you, Jimmy! Guess you have a new friend, Kimmy!
 
 Kimmy: I think… that sounds fun...
 
 Jimmy: A-anytime, anytime… um…
 
++[Let's play a game!] -> Game
+
+= Game
 Dana: Say, are you free to play a game with us, Jimmy? We’ll teach you something new!
 
 Jimmy: I’m not very good at games… b-but, if Kimmy wants me to...
@@ -972,6 +1055,9 @@ Dana: A little money that your parents give you every week, usually.
 
 Kimmy: Oh…
 
++[It's ok!] -> ok
+
+= ok
 Dana: Don’t worry, not everyone gets allowance, Kimmy. Friends are better than money anyways, and we’re going to make lots of friends for you!
 
 Kimmy: Ok…
@@ -991,12 +1077,18 @@ Jimmy: That’s nice of you…
 
 Kimmy: Kids tease me too.
 
++[Why?] -> Why
+
+= Why
 Jimmy: Why would they tease you? You’re so nice…
 
 Kimmy: I don’t know…
 
 Kimmy: People get mad and ask me if I know how to talk…
 
++[That's mean...] -> thatsMean
+
+= thatsMean
 Dana: That’s so stupid. It’s ok to be quiet, don’t let them get to you.
 
 Dana: If anyone tries to bully either of you, let me know. I’ll deal with them.
@@ -1012,12 +1104,18 @@ Dana: I mean I guess I’d just run away and tell my mom and dad…
 
 Dana: I’m actually not that helpful with bullies, haha. They bug me too.
 
++[It can be hard] -> Hard 
+
+= Hard
 Jimmy: My mom says not to walk around too much alone.
 
 Dana: Yes! Being with a buddy is a good idea.
 
 Jimmy: Maybe next year at school, Kimmy… we can sit together at recess… I know that usually we’re both um… sitting alone… then maybe we won’t get picked on as much...
 
++[That's a great idea!] -> Great
+
+= Great
 Kimmy: If you want, that sounds ok.
 
 Dana: You’ve never played together at school before? You two should stick together!
@@ -1041,6 +1139,9 @@ Jimmy: Will you be my friend, Kimmy?
 
 Kimmy: ...Ok.
 
++[Aw that's nice]  -> Nice 
+
+= Nice
 Dana: Haha, you two...
 
 Dana: Wasn't that fun, Kimmy!
