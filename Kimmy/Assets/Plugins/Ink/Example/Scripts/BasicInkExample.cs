@@ -2,11 +2,12 @@
 using UnityEngine.UI;
 using System.Collections;
 using Ink.Runtime;
+using UnityEngine.SceneManagement;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class BasicInkExample : MonoBehaviour
 {
-
+	private int count;
 	public AudioSource click;
 	public Sprite dana;
 	public Sprite kimmy;
@@ -16,6 +17,7 @@ public class BasicInkExample : MonoBehaviour
 	public Sprite donna;
 	public Sprite janey;
 	public Sprite jimmy;
+	public Sprite harold;
 	
 	[SerializeField] private TextAsset _inkJsonAsset;
 	[SerializeField] private Story story;
@@ -26,6 +28,7 @@ public class BasicInkExample : MonoBehaviour
 	
 	
 	[SerializeField] private Canvas canvas;
+	[SerializeField] private Canvas canvas2;
 
 	[SerializeField] private Image imagePrefab;
 
@@ -58,7 +61,12 @@ public class BasicInkExample : MonoBehaviour
 
 	void RefreshView(){
 		
-		if (!Input.anyKeyDown) return;
+		if (Input.GetKeyDown(KeyCode.Z))
+		{
+			SceneManager.LoadScene("Menu");
+		}
+		
+		if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
 		
 		click.Play();
 		
@@ -100,6 +108,8 @@ public class BasicInkExample : MonoBehaviour
 		RemoveChildren();
 		var text = story.Continue();
 		var choiceText = "";
+
+		
 		if (story.currentChoices.Count > 0)
 		{
 			for (var i = 0; i < story.currentChoices.Count; i++) {
@@ -126,43 +136,39 @@ public class BasicInkExample : MonoBehaviour
 		{
 			if (text.Contains("Dana:"))
 			{
-				Debug.Log("dana");
 				storyImage.sprite = dana;
 			}
 			if (text.Contains("Kimmy:"))
 			{
-				Debug.Log("kimmy");
 				storyImage.sprite = kimmy;
 			}
 			if (text.Contains("Mom:"))
 			{
-				Debug.Log("danaMom");
 				storyImage.sprite = danaMom;
 			}
 			if (text.Contains("Mrs. Munro:"))
 			{
-				Debug.Log("kimmyMom");
 				storyImage.sprite = kimmyMom;
 			}
 			if (text.Contains("Dean:"))
 			{
-				Debug.Log("dean");
 				storyImage.sprite = dean;
 			}
 			if (text.Contains("Donna:"))
 			{
-				Debug.Log("donna");
 				storyImage.sprite = donna;
 			}
 			if (text.Contains("Janey:"))
 			{
-				Debug.Log("janey");
 				storyImage.sprite = janey;
 			}
 			if (text.Contains("Jimmy:"))
 			{
-				Debug.Log("jimmy");
 				storyImage.sprite = jimmy;
+			}
+			if (text.Contains("Harold:"))
+			{
+				storyImage.sprite = harold;
 			}
 		}
 	}
@@ -171,7 +177,7 @@ public class BasicInkExample : MonoBehaviour
 	Button CreateChoiceView (string text) {
 		// Creates the button from a prefab
 		Button choice = Instantiate (buttonPrefab) as Button;
-		choice.transform.SetParent (canvas.transform, true);
+		choice.transform.SetParent (canvas2.transform, true);
 		
 		// Gets the text from the button prefab
 		Text choiceText = choice.GetComponentInChildren<Text> ();
@@ -187,7 +193,11 @@ public class BasicInkExample : MonoBehaviour
 	void RemoveChildren () {
 		int childCount = canvas.transform.childCount;
 		for (int i = childCount - 1; i >= 0; --i) {
-			GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
+			Destroy (canvas.transform.GetChild (i).gameObject);
+		}
+		int buttonChildCount = canvas2.transform.childCount;
+		for (int i = buttonChildCount - 1; i >= 0; --i) {
+			Destroy (canvas2.transform.GetChild (i).gameObject);
 		}
 	}
 }
